@@ -9,10 +9,11 @@
     <title>Olá mundo!!</title>
 </head>
 
-<body>
+<body class="cor">
+
     <header class="cabecalho-principal">
         <div class="container">
-            <img src="imagens/logoatt.png" alt="" class="imagem-logo">
+            <img src="imagens/FocusLume.png" alt="" class="imagem-logo">
             <nav class="aromas-nav">
                 <a class="aromas-nav-link" href="#um">Alecrim</a>
                 <a class="aromas-nav-link" href="#dois">Lavanda</a>
@@ -47,7 +48,7 @@
                 mais verde.
             </p>
         </div>
-<p>teste</p>
+
         <div class="separar-conteudo">
             <h1>Nossos Produtos</h1>
         </div>
@@ -174,10 +175,38 @@
                 alcance e conectando-nos com aqueles que valorizam
                 uma experiência aromática diferenciada.</p>
         </div>
+            <!-- Botão para voltar ao topo -->
+    <div class="scroll-top-button" onclick="scrollToTop()">
+        <span>&uarr;</span>
+    </div>
+
+    <script>
+        // Função para rolar suavemente para o topo da página
+        function scrollToTop() {
+            if (document.documentElement.scrollTop > 0) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        // Exibir ou ocultar o botão com base na posição da página
+        window.onscroll = function() {
+            var scrollButton = document.querySelector('.scroll-top-button');
+            if (document.documentElement.scrollTop > 100) {
+                scrollButton.style.display = 'block';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        }
+    </script>
     </main>
     <footer>
 
     </footer>
+
 </body>
+
 
 </html>
